@@ -42,7 +42,7 @@ def createMessage():
 
     # ランダムな日本語10文字を設定
     while i < 10:
-        message += chr(random.randint(ord('あ'), ord('ん')))
+        message += chr(random.randint(12353, 12436))
         i += 1
 
     return message
