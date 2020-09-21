@@ -1,9 +1,15 @@
-from credential import ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET, API_KEY, API_SECRET_KEY
 from requests_oauthlib import OAuth1Session
 import random
+import os
 
 
 def main():
+
+    # 環境変数取得
+    API_KEY = os.environ.get('API_KEY')
+    API_SECRET_KEY = os.environ.get('API_SECRET_KEY')
+    ACCESS_TOKEN_KEY = os.environ.get('ACCESS_TOKEN_KEY')
+    ACCESS_TOKEN_SECRET = os.environ.get('ACCESS_TOKEN_SECRET')
 
     # Twitter認証
     twitter = OAuth1Session(
