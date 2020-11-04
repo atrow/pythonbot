@@ -1,9 +1,19 @@
 from requests_oauthlib import OAuth1Session
 import random
 import os
+import datetime
+import sys
 
 
 def main():
+
+    # システム時刻取得
+    hour = datetime.datetime.now().hour
+
+    if hour == 0 or hour == 3 or hour == 6 or hour == 9 or hour == 12 or hour == 15 or hour == 18 or hour == 21:
+        print("Execute the process.")
+    else:
+        sys.exit()
 
     # 環境変数取得
     API_KEY = os.environ.get('API_KEY')
